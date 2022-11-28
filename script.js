@@ -1,7 +1,5 @@
 const btn = document.querySelector("[data-form-btn]");
-
 //Arrow function o funciones anonimas "const createTask = (evento) => {""
-
 const createTask = (evento) => {
     evento.preventDefault()
     const input = document.querySelector("[data-form-input]");
@@ -11,8 +9,8 @@ const createTask = (evento) => {
     task.classList.add("card")
     input.value = " ";
     const content = `<div>
-    <i class="far fa-check-square icon"></i>
-    <span class="task">${value}</span>
+        <i class="far fa-check-square icon"></i>
+        <span class="task">${value}</span>
     </div>
     <i class="fas fa-trash-alt trashIcon icon"></i>`;
     task.innerHTML = content;
@@ -25,5 +23,8 @@ const createTask = (evento) => {
     console.log(btn);
     
     btn.addEventListener("click", createTask );
-    
-    
+
+    const checkComplete = () => {
+        const i = document.createElement("i")
+        i.classList.add ("far fa-check-square icon")
+    }
